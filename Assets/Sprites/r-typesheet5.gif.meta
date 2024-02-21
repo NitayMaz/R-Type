@@ -106,11 +106,37 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: r-typesheet5_0
+      name: redship1
       rect:
         serializedVersion: 2
         x: 0
@@ -131,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: r-typesheet5_1
+      name: redship2
       rect:
         serializedVersion: 2
         x: 33
@@ -152,7 +178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: r-typesheet5_2
+      name: redship3
       rect:
         serializedVersion: 2
         x: 66
@@ -173,7 +199,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: r-typesheet5_3
+      name: redship4
       rect:
         serializedVersion: 2
         x: 99
@@ -194,7 +220,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: r-typesheet5_4
+      name: redship5
       rect:
         serializedVersion: 2
         x: 132
@@ -215,7 +241,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: r-typesheet5_5
+      name: redship6
       rect:
         serializedVersion: 2
         x: 165
@@ -236,7 +262,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: r-typesheet5_6
+      name: redship7
       rect:
         serializedVersion: 2
         x: 198
@@ -257,7 +283,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: r-typesheet5_7
+      name: redship8
       rect:
         serializedVersion: 2
         x: 231
@@ -277,195 +303,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: r-typesheet5_8
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 0
-        width: 33.3125
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b438caa99cb45547a29f8a61fd0a729
-      internalID: -951542370
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet5_9
-      rect:
-        serializedVersion: 2
-        x: 297
-        y: 0
-        width: 33.3125
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb8e78f16e7a0874c9057d776c1f5be5
-      internalID: 1995696160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet5_10
-      rect:
-        serializedVersion: 2
-        x: 330
-        y: 0
-        width: 33.3125
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e64fa56ffeaca042869f9fd98ed75a0
-      internalID: 1542815607
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet5_11
-      rect:
-        serializedVersion: 2
-        x: 363
-        y: 0
-        width: 33.3125
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c7809c412336ed449e104619d7b62c4
-      internalID: 1121870838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet5_12
-      rect:
-        serializedVersion: 2
-        x: 396
-        y: 0
-        width: 33.3125
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c93fc2a27a7806a44ad5816abb6d0fa2
-      internalID: -743384876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet5_13
-      rect:
-        serializedVersion: 2
-        x: 429
-        y: 0
-        width: 33.3125
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e43010a9dda22a74cae5ca7031abcdce
-      internalID: -1291356236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet5_14
-      rect:
-        serializedVersion: 2
-        x: 462
-        y: 0
-        width: 33.3125
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e83ca85e45f05b144b161a7bdd23bd88
-      internalID: 275796011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet5_15
-      rect:
-        serializedVersion: 2
-        x: 495
-        y: 0
-        width: 33.3125
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 597ba4d960e329648a00591530c06e64
-      internalID: 568834980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet5_16
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 6
-        width: 251
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cd8d530146898e4fb3557c720722184
-      internalID: -1360142005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -477,8 +314,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      r-typesheet5_0: -338727317
-      r-typesheet5_1: -1612454910
       r-typesheet5_10: 1542815607
       r-typesheet5_11: 1121870838
       r-typesheet5_12: -743384876
@@ -486,14 +321,16 @@ TextureImporter:
       r-typesheet5_14: 275796011
       r-typesheet5_15: 568834980
       r-typesheet5_16: -1360142005
-      r-typesheet5_2: -960830404
-      r-typesheet5_3: 1176332088
-      r-typesheet5_4: 1263144671
-      r-typesheet5_5: 664087678
-      r-typesheet5_6: -6997648
-      r-typesheet5_7: 996083271
       r-typesheet5_8: -951542370
       r-typesheet5_9: 1995696160
+      redship1: -338727317
+      redship2: -1612454910
+      redship3: -960830404
+      redship4: 1176332088
+      redship5: 1263144671
+      redship6: 664087678
+      redship7: -6997648
+      redship8: 996083271
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
