@@ -1,0 +1,562 @@
+fileFormatVersion: 2
+guid: e51524b9062c34d438bdb2020127f334
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: r-typesheet1_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 356
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66fc1e6c0f360b1419ed3040d20a5412
+      internalID: 1962928454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_2
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 357
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec8236b308fc3744978e42a4b066102
+      internalID: 1354815592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 356
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c73db72979473d42bb32d5388da776c
+      internalID: 650729366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_4
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 356
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0514d61c86b1a954e997d9249766cca9
+      internalID: -510251337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_5
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 355
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d8f8848fea184428acc0f7d3810ed0
+      internalID: 262178148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_26
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 275
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216ab2a9e1ca67749a6ca5df30ac4967
+      internalID: 1250753770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_27
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 276
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4269008bdedc16e4594faac3b6c46da9
+      internalID: 1541063771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_28
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 278
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1793ae3b84726c438587027e34bcacb
+      internalID: 1449347952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_32
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 257
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f662248cb62f1fc4f85d2401a87a5f5a
+      internalID: -2057924111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_33
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 259
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6526d805980aa2e498e0663b11c92b24
+      internalID: -2127157141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_40
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 223
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e52a394847b2b4409317fa0c22f43f9
+      internalID: 1985805915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_41
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 222
+        width: 48
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80361e61be2a2b43a1838c14e20d52d
+      internalID: -1678357829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_48
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 187
+        width: 80
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b44ef41257e3b45a38421e7654c497
+      internalID: 68799484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r-typesheet1_49
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 186
+        width: 80
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfae48010417abb44b57a6f3ab763e57
+      internalID: -1666238329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      r-typesheet1_0: -1252618303
+      r-typesheet1_1: 1962928454
+      r-typesheet1_10: 1527526571
+      r-typesheet1_100: 1842604580
+      r-typesheet1_101: -299496311
+      r-typesheet1_102: -1966393857
+      r-typesheet1_103: -334474163
+      r-typesheet1_104: 62139752
+      r-typesheet1_105: 636048857
+      r-typesheet1_106: -423397737
+      r-typesheet1_107: 554147315
+      r-typesheet1_108: 289011362
+      r-typesheet1_109: 1637191227
+      r-typesheet1_11: -74614721
+      r-typesheet1_110: 1243446074
+      r-typesheet1_111: -1301112473
+      r-typesheet1_112: -489470123
+      r-typesheet1_113: -1332598458
+      r-typesheet1_114: -138062066
+      r-typesheet1_115: -783882079
+      r-typesheet1_116: 837578961
+      r-typesheet1_117: -789217473
+      r-typesheet1_118: -817327207
+      r-typesheet1_119: -474463020
+      r-typesheet1_12: 1681608566
+      r-typesheet1_120: 2006353763
+      r-typesheet1_121: -983883494
+      r-typesheet1_122: 187316807
+      r-typesheet1_123: -1883824993
+      r-typesheet1_124: -920537868
+      r-typesheet1_125: -1532493217
+      r-typesheet1_126: 1684451299
+      r-typesheet1_127: -669837776
+      r-typesheet1_128: 376884216
+      r-typesheet1_129: -297978148
+      r-typesheet1_13: 739774556
+      r-typesheet1_130: 798867459
+      r-typesheet1_131: 1839543438
+      r-typesheet1_132: -1341339952
+      r-typesheet1_133: 802096476
+      r-typesheet1_134: -1743676309
+      r-typesheet1_135: 786188722
+      r-typesheet1_136: -2105162768
+      r-typesheet1_137: 1091883457
+      r-typesheet1_138: 1443751452
+      r-typesheet1_139: -1746705682
+      r-typesheet1_14: 174096244
+      r-typesheet1_140: -2053990903
+      r-typesheet1_15: -1321896474
+      r-typesheet1_16: 774148108
+      r-typesheet1_17: 221933066
+      r-typesheet1_18: 1827152135
+      r-typesheet1_19: -1898453891
+      r-typesheet1_2: 1354815592
+      r-typesheet1_20: -227137515
+      r-typesheet1_21: -1553673334
+      r-typesheet1_22: -989950465
+      r-typesheet1_23: 955662390
+      r-typesheet1_24: 1508643178
+      r-typesheet1_25: -1996674002
+      r-typesheet1_26: 1250753770
+      r-typesheet1_27: 1541063771
+      r-typesheet1_28: 1449347952
+      r-typesheet1_29: 418571082
+      r-typesheet1_3: 650729366
+      r-typesheet1_30: 1689704636
+      r-typesheet1_31: 1533376374
+      r-typesheet1_32: -2057924111
+      r-typesheet1_33: -2127157141
+      r-typesheet1_34: 1923821380
+      r-typesheet1_35: -990594386
+      r-typesheet1_36: 939282123
+      r-typesheet1_37: -518970518
+      r-typesheet1_38: 436036699
+      r-typesheet1_39: 1787806356
+      r-typesheet1_4: -510251337
+      r-typesheet1_40: 1985805915
+      r-typesheet1_41: -1678357829
+      r-typesheet1_42: -1408655167
+      r-typesheet1_43: 272575822
+      r-typesheet1_44: -102925991
+      r-typesheet1_45: 130986759
+      r-typesheet1_46: -72141968
+      r-typesheet1_47: 275755166
+      r-typesheet1_48: 68799484
+      r-typesheet1_49: -1666238329
+      r-typesheet1_5: 262178148
+      r-typesheet1_50: 399440800
+      r-typesheet1_51: -198252088
+      r-typesheet1_52: -1977976502
+      r-typesheet1_53: -1895758565
+      r-typesheet1_54: 1252394251
+      r-typesheet1_55: 388206184
+      r-typesheet1_56: -779432343
+      r-typesheet1_57: -31073167
+      r-typesheet1_58: 1704999967
+      r-typesheet1_59: 1577731736
+      r-typesheet1_6: 532788305
+      r-typesheet1_60: 1233761795
+      r-typesheet1_61: 1092115950
+      r-typesheet1_62: 1252209052
+      r-typesheet1_63: 2029007376
+      r-typesheet1_64: 1615118623
+      r-typesheet1_65: -317879776
+      r-typesheet1_66: -1705249032
+      r-typesheet1_67: 286802854
+      r-typesheet1_68: -160387407
+      r-typesheet1_69: 2099501347
+      r-typesheet1_7: -1991123341
+      r-typesheet1_70: 850658337
+      r-typesheet1_71: 540442795
+      r-typesheet1_72: -92466752
+      r-typesheet1_73: 1880266883
+      r-typesheet1_74: 1758991483
+      r-typesheet1_75: -812307771
+      r-typesheet1_76: 1939993884
+      r-typesheet1_77: 861541110
+      r-typesheet1_78: -1835750317
+      r-typesheet1_79: -409258326
+      r-typesheet1_8: 1285837249
+      r-typesheet1_80: 1248935704
+      r-typesheet1_81: -51224533
+      r-typesheet1_82: -1137859152
+      r-typesheet1_83: -1172029451
+      r-typesheet1_84: -129263059
+      r-typesheet1_85: 510344147
+      r-typesheet1_86: -1035542671
+      r-typesheet1_87: 1474694424
+      r-typesheet1_88: 1784588663
+      r-typesheet1_89: 817736837
+      r-typesheet1_9: -1644568925
+      r-typesheet1_90: -1415261094
+      r-typesheet1_91: 1601974073
+      r-typesheet1_92: -1500929795
+      r-typesheet1_93: -1350843718
+      r-typesheet1_94: 778068121
+      r-typesheet1_95: -1844308442
+      r-typesheet1_96: 328131292
+      r-typesheet1_97: 639329338
+      r-typesheet1_98: -1896483472
+      r-typesheet1_99: 707954315
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
