@@ -6,6 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public Animator playerAnimator;
+
+    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,31 +19,38 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.W))
+        handleMovement();
+    }
+
+    void handleMovement()
+    {
+        if (Input.GetKey(KeyCode.W))
         {
             playerAnimator.SetBool("movingUp", true);
-            transform.position += Vector3.up*moveSpeed*Time.deltaTime;
+            transform.position += Vector3.up * moveSpeed * Time.deltaTime;
         }
-        if(Input.GetKeyUp(KeyCode.W))
+        if (Input.GetKeyUp(KeyCode.W))
         {
             playerAnimator.SetBool("movingUp", false);
         }
-        if(Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
             playerAnimator.SetBool("movingDown", true);
-            transform.position += Vector3.down*moveSpeed*Time.deltaTime;
+            transform.position += Vector3.down * moveSpeed * Time.deltaTime;
         }
-        if(Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.S))
         {
             playerAnimator.SetBool("movingDown", false);
         }
-        if(Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-            transform.position += Vector3.left*moveSpeed*Time.deltaTime;
+            transform.position += Vector3.left * moveSpeed * Time.deltaTime;
         }
-        if(Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            transform.position += Vector3.right*moveSpeed*Time.deltaTime;
+            transform.position += Vector3.right * moveSpeed * Time.deltaTime;
         }
     }
+
+    
 }
