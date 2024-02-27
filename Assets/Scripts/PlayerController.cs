@@ -16,6 +16,15 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //enemy collisions are handled in enemy abstract class
+        if (collision.gameObject.tag == "Map")
+        {
+            Die();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -50,6 +59,13 @@ public class PlayerController : MonoBehaviour
         {
             transform.position += Vector3.right * moveSpeed * Time.deltaTime;
         }
+    }
+
+
+    public void Die()
+    {
+        playerAnimator.SetTrigger("die");
+        Destroy(gameObject);
     }
 
     
