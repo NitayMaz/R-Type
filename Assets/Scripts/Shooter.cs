@@ -12,14 +12,14 @@ public class Shooter : MonoBehaviour
     public float minTimeForSmallBeam = 0.4f;
     public float minTimeForBigBeam = 1f;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
+        if(!GameManager.instance.isPlaying)
+        {
+            return;
+        }
         if (Input.GetKey(KeyCode.Space))
         {
             if(spaceHeldTime > minTimeForSmallBeam)

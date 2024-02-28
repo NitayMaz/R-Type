@@ -61,10 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Game Manager.cs" />
+    <Compile Include="Assets\Scripts\Spinner.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Shooter.cs" />
     <Compile Include="Assets\Scripts\Enemy Factory.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Enemy Bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
