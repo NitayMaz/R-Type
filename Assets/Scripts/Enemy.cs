@@ -27,7 +27,7 @@ public abstract class Enemy : MonoBehaviour
 
     public abstract void StartAnimation();
 
-    public abstract Vector3 Move();
+    public abstract Vector3 getMove();
 
 
     private void Update()
@@ -36,7 +36,7 @@ public abstract class Enemy : MonoBehaviour
         {
             return;
         }
-        movementAddition += Move();
+        movementAddition += getMove();
         //this isn't perfect, since the time between atacks is also dependent on the frame rate, but it has randomness anyway and the difference will never be noticeable.
         timeSinceLastAttack += Time.deltaTime;
         if (timeSinceLastAttack >= timeToNextAttack)
@@ -56,19 +56,15 @@ public abstract class Enemy : MonoBehaviour
     private void Attack()
     {
         EnemyBullet bullet = Instantiate(enemyBulletPrefab, transform.position, transform.rotation).GetComponent<EnemyBullet>();
-        bullet.setSpeed((player.transform.position - bullet.transform.position).normalized);
+        bullet.SetSpeed((player.transform.position - bullet.transform.position).normalized);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
             player.Die();
-        }
-        if (collision.gameObject.tag == "Map")
-        {
-            Die();
         }
         //collisions with bullets are handled in the bullet class
     }

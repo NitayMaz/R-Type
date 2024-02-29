@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public Animator bulletAnimator;
-    public float speed = 5f;
+    public float speed = 3f;
     private Vector3 movementDelta;
 
 
@@ -15,7 +15,7 @@ public class EnemyBullet : MonoBehaviour
         bulletAnimator.SetBool("enemyBullet", true);
     }
 
-    public void setSpeed(Vector3 directionToTarget)
+    public void SetSpeed(Vector3 directionToTarget)
     {
         //directionToTarget is normalized
         movementDelta = directionToTarget*speed*Time.deltaTime;

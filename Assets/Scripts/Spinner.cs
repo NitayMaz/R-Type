@@ -13,9 +13,18 @@ public class Spinner : Enemy
         enemyAnimator.SetTrigger("spinner");
     }
 
-    public override Vector3 Move()
+    public override Vector3 getMove()
     {
         //moves like a sine wave
         return new Vector3(speedX * Time.deltaTime, movementAmplitude * Mathf.Sin(transform.position.x*movementFrequency), 0);
+    }
+
+    protected override void OnTriggerEnter2D(Collider2D collision)
+    {
+        base.OnTriggerEnter2D(collision);
+        if (collision.gameObject.CompareTag("Map"))
+        {
+            Die();
+        }
     }
 }

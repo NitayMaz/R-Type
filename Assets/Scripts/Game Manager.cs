@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public EnemyFactory enemyFactory;
 
     public int score = 0;
 
@@ -23,6 +24,11 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        enemyFactory.CreateEnemy(EnemyType.CentipedeDownLeft, new Vector3(10, 1, 0));
     }
 
 }

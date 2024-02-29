@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -134,7 +134,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: centiDown
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 34
+        width: 33.25
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630fbd96e67b89d4fb33f9e54aa35ff1
+      internalID: 1036559175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: centiDownLeft
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 34
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae077c1adbaa7347bd4a77cbf344f43
+      internalID: -834420934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: centiLeft
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 33.25
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60df519b30441004f8c42529ce691290
+      internalID: -733188286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: centiUpLeft
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 33.25
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac94b947a2cfc6843b9c0959d807c2ae
+      internalID: -1232719950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: centiUp
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 33.25
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b5a06c85cfd68428386f84df905ab9
+      internalID: -812218010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +250,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      centiDown: 1036559175
+      centiDownLeft: -834420934
+      centiLeft: -733188286
+      centiUp: -812218010
+      centiUpLeft: -1232719950
+      r-typesheet8_0: 1649294806
+      r-typesheet8_1: -1058784708
+      r-typesheet8_11: 2101712660
+      r-typesheet8_13: 1272379903
+      r-typesheet8_14: 650036403
+      r-typesheet8_15: -118043116
+      r-typesheet8_2: -1948356896
+      r-typesheet8_3: 1692978049
+      r-typesheet8_5: 710374054
+      r-typesheet8_7: -1891507017
+      r-typesheet8_9: 1801987702
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
