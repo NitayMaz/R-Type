@@ -5,20 +5,23 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public Animator bulletAnimator;
+    private Rigidbody2D rb;
+
     public float speed = 0.5f;
-    private Vector3 movementDelta;
+    private Vector2 movementDelta;
 
 
     // Start is called before the first frame update
     void Start()
     {
         bulletAnimator.SetBool("enemyBullet", true);
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    public void SetSpeed(Vector3 directionToTarget)
+    public void SetSpeed(Vector2 directionToTarget)
     {
         //directionToTarget is normalized
-        movementDelta = directionToTarget*speed*Time.deltaTime;
+        movementDelta = directionToTarget*speed;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,12 +37,12 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!GameManager.instance.isPlaying)
         {
             return;
         }
-        transform.position += movementDelta;
+        rb.MovePosition(rb.position + movementDelta*Time.fixedDeltaTime);
     }
 }

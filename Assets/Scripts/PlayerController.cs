@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     public Camera gameCamera;
 
-    private Vector3 movementAddition = Vector3.zero;
+    private Vector2 movementAddition;
     private float minCameraX, minCameraY, maxCameraX, maxCameraY;
 
 
@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Player collided with something");
         //enemy and enemy bullets collisions are handled in those classes
         if (collision.gameObject.tag == "Map")
         {
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             playerAnimator.SetBool("movingUp", true);
-            movementAddition += Vector3.up * moveSpeed * Time.deltaTime;
+            movementAddition += Vector2.up * moveSpeed * Time.deltaTime;
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
@@ -71,7 +72,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             playerAnimator.SetBool("movingDown", true);
-            movementAddition += Vector3.down * moveSpeed * Time.deltaTime;
+            movementAddition += Vector2.down * moveSpeed * Time.deltaTime;
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
@@ -79,22 +80,26 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            movementAddition += Vector3.left * moveSpeed * Time.deltaTime;
+            movementAddition += Vector2.left * moveSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            movementAddition += Vector3.right * moveSpeed * Time.deltaTime;
+            movementAddition += Vector2.right * moveSpeed * Time.deltaTime;
         }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         // make sure the player doesn't go off screen and move him
-        Vector3 newPosition = transform.position + movementAddition;
+        Vector2 newPosition = rb.position + movementAddition;
         newPosition.x = Mathf.Clamp(newPosition.x, minCameraX + minDistanceFromEdgesX, maxCameraX - minDistanceFromEdgesX);
         newPosition.y = Mathf.Clamp(newPosition.y, minCameraY + minDistanceFromEdgesY, maxCameraY - minDistanceFromEdgesY);
+        Debug.Log($"rb.position before move: {rb.position}");
+        Debug.Log($"newPosition: {newPosition}");
+        rb.MovePosition( newPosition );
         rb.MovePosition(newPosition);
-        movementAddition = Vector3.zero;
+        Debug.Log($"rb.position after move: {rb.position}");
+        movementAddition = Vector2.zero;
     }
 
     public void Die()
@@ -110,5 +115,10 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(playerAnimator.GetCurrentAnimatorStateInfo(0).length);
         Destroy(gameObject);
     }
-    
+    /*
+    public IEnumerator PlayOpeningAnimation()
+    {
+        playerAnimator.SetTrigger("openingAnimation");
+        yield return new WaitWhile(() => playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Entering Screen"));
+    }*/
 }

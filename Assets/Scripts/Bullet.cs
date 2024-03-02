@@ -7,12 +7,13 @@ public class Bullet : MonoBehaviour
     //TODO: make this an enum ffs
     public int type; // 1 is a small bullet, 2 is a small charged beam, 3 is a big charged beam
 
+    private Rigidbody2D rb;
+    private Animator bulletAnimator;
+    private BoxCollider2D bulletCollider;
+
     public float speed = 10f;
-    public Animator bulletAnimator;
-    public BoxCollider2D bulletCollider;
     public Vector2 smallBeamColliderDimensions;
     public Vector2 largeBeamColliderDimensions;
-    
     public float xOffsetSmallBeam = 0.5f;
     public float xOffsetBigBeam = 1.5f;
     public int simpleBulletDamage = 1;
@@ -20,15 +21,21 @@ public class Bullet : MonoBehaviour
     public int largeBeamDamage = 3;
     public int damage;
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        bulletAnimator = GetComponent<Animator>();
+        bulletCollider = GetComponent<BoxCollider2D>();
+    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(!GameManager.instance.isPlaying)
         {
             return;
         }
-        transform.position += Vector3.right * speed * Time.deltaTime;
+        rb.MovePosition(rb.position + Vector2.right * speed * Time.fixedDeltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
