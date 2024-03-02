@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1849613025570120850}
   - component: {fileID: 8948013114568143117}
   - component: {fileID: -8344084491823645863}
+  - component: {fileID: 8964954202705122813}
   m_Layer: 0
   m_Name: CentiPart
   m_TagString: Untagged
@@ -198,6 +199,18 @@ MonoBehaviour:
   health: 1
   enemyAnimator: {fileID: 8948013114568143117}
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
-  player: {fileID: 1598962043441710143, guid: 49f0c544673bcd14abeb4d4a12db862e, type: 3}
   rb: {fileID: 1849613025570120850}
   speed: 0
+--- !u!114 &8964954202705122813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7564465965523535845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  edgeBuffer: 0.05

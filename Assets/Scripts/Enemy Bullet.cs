@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public Animator bulletAnimator;
-    public float speed = 3f;
+    public float speed = 0.5f;
     private Vector3 movementDelta;
 
 

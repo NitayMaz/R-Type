@@ -14,13 +14,14 @@ public abstract class Enemy : MonoBehaviour
     private bool isDead = false;
     public Animator enemyAnimator;
     public GameObject enemyBulletPrefab;
-    public GameObject player;
+    private GameObject player;
     public Rigidbody2D rb;
     private Vector3 movementAddition = Vector3.zero;
 
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         StartAnimation();
         timeToNextAttack = Random.Range(minTimeBetweenAttacks, maxTimeBetweenAttacks);
     }

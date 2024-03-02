@@ -118,7 +118,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.1316282e-14, y: 0.00000017881396}
@@ -136,9 +136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59d318a7b87ca247b4a1311ff81d2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minDistanceFromEdgesY: 0.5
+  minDistanceFromEdgesX: 1
   moveSpeed: 5
   playerAnimator: {fileID: 2552144483832693544}
   alive: 1
+  gameCamera: {fileID: 0}
 --- !u!95 &2552144483832693544
 Animator:
   serializedVersion: 5
@@ -307,6 +310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shooterAnimator: {fileID: 1536451697097061218}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 2801268529838235677, guid: 89df31d3f13093c48be3a50b74119cdd, type: 3}
   minTimeForSmallBeam: 0.4
   minTimeForBigBeam: 1

@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public float minDistanceFromEdgesY = 0.5f;
+    public float minDistanceFromEdgesX = 1f;
     public float moveSpeed = 5f;
     public Animator playerAnimator;
     public bool alive = true;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
+    public Camera gameCamera;
 
     private Vector3 movementAddition = Vector3.zero;
+    private float minCameraX, minCameraY, maxCameraX, maxCameraY;
 
 
 
@@ -17,7 +21,21 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         alive = true;
+        CalculateCameraBounds();
+    }
+
+    private void CalculateCameraBounds()
+    {
+        Vector2 bottomLeft = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0));
+        Vector2 topRight = gameCamera.ViewportToWorldPoint(new Vector3(1, 1, 0));
+        minCameraX = bottomLeft.x;
+        minCameraY = bottomLeft.y;
+        maxCameraX = topRight.x;
+        maxCameraY = topRight.y;
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -71,7 +89,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(transform.position + movementAddition);
+        // make sure the player doesn't go off screen and move him
+        Vector3 newPosition = transform.position + movementAddition;
+        newPosition.x = Mathf.Clamp(newPosition.x, minCameraX + minDistanceFromEdgesX, maxCameraX - minDistanceFromEdgesX);
+        newPosition.y = Mathf.Clamp(newPosition.y, minCameraY + minDistanceFromEdgesY, maxCameraY - minDistanceFromEdgesY);
+        rb.MovePosition(newPosition);
         movementAddition = Vector3.zero;
     }
 

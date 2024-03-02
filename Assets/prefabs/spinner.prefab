@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2636559210342304890}
   - component: {fileID: 6476817625220343518}
   - component: {fileID: 1242885472535923841}
+  - component: {fileID: 2042252350106606399}
   m_Layer: 0
   m_Name: spinner
   m_TagString: Enemy
@@ -198,8 +199,22 @@ MonoBehaviour:
   health: 1
   enemyAnimator: {fileID: 2636559210342304890}
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
-  player: {fileID: 0}
   rb: {fileID: 6476817625220343518}
   movementAmplitude: 0.005
   movementFrequency: 2
   speedX: -1
+--- !u!114 &2042252350106606399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6003185635654932578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.6
+  topEdgeBuffer: 0.05

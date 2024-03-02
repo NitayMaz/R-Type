@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    //TODO: make this an enum ffs
     public int type; // 1 is a small bullet, 2 is a small charged beam, 3 is a big charged beam
 
     public float speed = 10f;
@@ -40,7 +41,8 @@ public class Bullet : MonoBehaviour
             {
                 enemy.Die();
             }
-            Destroy(gameObject);
+            if(type==1)
+                Destroy(gameObject);
         }
         if(collision.gameObject.tag == "Map")
         {
