@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -19,13 +20,16 @@ public class PlayerController : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+    void Start() 
+    { 
         alive = true;
         CalculateCameraBounds();
     }
-
+    
     private void CalculateCameraBounds()
     {
         Vector2 bottomLeft = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0));
@@ -35,12 +39,11 @@ public class PlayerController : MonoBehaviour
         maxCameraX = topRight.x;
         maxCameraY = topRight.y;
 
-
+    
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Player collided with something");
         //enemy and enemy bullets collisions are handled in those classes
         if (collision.gameObject.tag == "Map")
         {
@@ -94,13 +97,8 @@ public class PlayerController : MonoBehaviour
         Vector2 newPosition = rb.position + movementAddition;
         newPosition.x = Mathf.Clamp(newPosition.x, minCameraX + minDistanceFromEdgesX, maxCameraX - minDistanceFromEdgesX);
         newPosition.y = Mathf.Clamp(newPosition.y, minCameraY + minDistanceFromEdgesY, maxCameraY - minDistanceFromEdgesY);
-        Debug.Log($"rb.position before move: {rb.position}");
-        Debug.Log($"newPosition: {newPosition}");
-        rb.MovePosition( newPosition );
         rb.MovePosition(newPosition);
-        Debug.Log($"rb.position after move: {rb.position}");
-        movementAddition = Vector2.zero;
-    }
+        movementAddition = Vector2.zero;    }
 
     public void Die()
     {
@@ -115,10 +113,17 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(playerAnimator.GetCurrentAnimatorStateInfo(0).length);
         Destroy(gameObject);
     }
-    /*
     public IEnumerator PlayOpeningAnimation()
-    {
-        playerAnimator.SetTrigger("openingAnimation");
-        yield return new WaitWhile(() => playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Entering Screen"));
-    }*/
+    {   
+        //first I need to pre-warm the animation so it shows in full, then play it in full
+        playerAnimator.Play("Entering Screen",-1,0);
+        playerAnimator.Update(0.01f);
+        playerAnimator.StopPlayback();
+        yield return null;
+        while (playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+        {
+            yield return null;
+        }
+        Debug.Log("Opening animation finished");
+    }
 }

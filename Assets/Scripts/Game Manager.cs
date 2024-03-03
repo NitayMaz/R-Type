@@ -30,15 +30,11 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
+        if (instance != null)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            Debug.Log("Singleton violation");
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
     }
 
     private void Start()
@@ -52,21 +48,18 @@ public class GameManager : MonoBehaviour
         maxCameraX = gameCamera.ViewportToWorldPoint(new Vector3(1, 1, 0)).x;
         //sort enemies by x position so that we always know the next enemy to spawn
         enemies = enemies.OrderBy(obj => obj.transform.position.x).ToList();
-        //StartCoroutine(StartNewGame());
-        isPlaying = true;
+        StartCoroutine(StartNewGame());
     }
-    /*
     IEnumerator StartNewGame()
     {
         audioSource.PlayOneShot(StartGameSound);
         //wait for animation to finish before starting the game
-        /*
         if (playStartAnimation)
             yield return StartCoroutine(playerController.PlayOpeningAnimation());
-        
-        
+        Debug.Log("Game started");
         isPlaying = true;
-    }*/
+    }
+    
 
     private void Update()
     {
@@ -98,5 +91,4 @@ public class GameManager : MonoBehaviour
     {
         mapRb.MovePosition(mapRb.position + Vector2.left * mapMoveSpeed * Time.fixedDeltaTime);
     }
-
 }

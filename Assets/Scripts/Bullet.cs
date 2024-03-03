@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
     public int largeBeamDamage = 3;
     public int damage;
 
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         bulletAnimator = GetComponent<Animator>();
