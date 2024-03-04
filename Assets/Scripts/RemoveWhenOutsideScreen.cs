@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class RemoveWhenOutsideScreen : MonoBehaviour
 {
-    public float leftEdgeBuffer = 0.05f, rightEdgeBuffer = 0.3f, topEdgeBuffer = 0.05f;
+    public float leftEdgeBuffer = 0.05f, rightEdgeBuffer = 0.05f, topEdgeBuffer = 0.05f;
     private Camera mainCamera;
     public GameObject indicator;
 

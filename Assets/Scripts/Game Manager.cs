@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public float mapMoveSpeed = 1.1f;
 
-
     public List<GameObject> enemies;
     private float maxCameraX;
     public float DistanceFromCameraToSpawnEnemy = 1f;
@@ -87,8 +86,15 @@ public class GameManager : MonoBehaviour
             MoveMap();
         }
     }
+
     private void MoveMap()
     {
         mapRb.MovePosition(mapRb.position + Vector2.left * mapMoveSpeed * Time.fixedDeltaTime);
+    }
+
+    public void AddScore(int scoreToAdd)
+    {
+        score += scoreToAdd;
+        UIHandler.instance.SetScoreText(score);
     }
 }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class CentipedePiece : Enemy
 {
     public float speed;
@@ -34,3 +34,4 @@ public class CentipedePiece : Enemy
         Debug.Log($"set speed to {velocity}");
     }
 }
+*/

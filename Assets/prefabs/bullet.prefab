@@ -124,8 +124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   speed: 10
-  bulletAnimator: {fileID: 5301864401882415399}
-  bulletCollider: {fileID: 8955516485435231938}
   smallBeamColliderDimensions: {x: 2.4, y: 0.65}
   largeBeamColliderDimensions: {x: 4, y: 0.7}
   xOffsetSmallBeam: 0.5
@@ -191,7 +189,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  edgeBuffer: 0.05
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0
+  topEdgeBuffer: 0.05
+  indicator: {fileID: 0}
 --- !u!50 &8650649109529222133
 Rigidbody2D:
   serializedVersion: 4

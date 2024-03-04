@@ -5,13 +5,18 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    public float maxTimeBetweenAttacks;
-    public float minTimeBetweenAttacks;
+
+    private bool isDead = false;
     private float timeToNextAttack;
     private float timeSinceLastAttack = 0;
 
-    public int health;
-    private bool isDead = false;
+    protected abstract float maxTimeBetweenAttacks { get; }
+    protected abstract float minTimeBetweenAttacks { get; }
+    protected abstract int health { get; set; }
+    protected abstract int scoreValue { get; }
+
+
+
     public Animator enemyAnimator;
     public GameObject enemyBulletPrefab;
     private GameObject player;
@@ -72,6 +77,7 @@ public abstract class Enemy : MonoBehaviour
 
     public void Die()
     {
+        GameManager.instance.AddScore(scoreValue);
         StartCoroutine(DeathAnimation());
     }
 
@@ -84,5 +90,12 @@ public abstract class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-   
+   public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
 }

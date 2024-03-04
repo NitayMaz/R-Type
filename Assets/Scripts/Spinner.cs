@@ -8,6 +8,14 @@ public class Spinner : Enemy
     public float movementFrequency = 2;
     public float speedX = 3;
 
+    protected override float maxTimeBetweenAttacks => 20.0f;
+
+    protected override float minTimeBetweenAttacks => 1.0f;
+
+    protected override int scoreValue => 100;
+
+    protected override int health { get; set; } = 1;
+
     public override void StartAnimation()
     {
         enemyAnimator.SetTrigger("spinner");

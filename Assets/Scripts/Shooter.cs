@@ -22,9 +22,11 @@ public class Shooter : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            if(spaceHeldTime > minTimeForSmallBeam)
+            if(spaceHeldTime > minTimeForSmallBeam/2)
                 shooterAnimator.SetBool("chargeShot", true);
             spaceHeldTime += Time.deltaTime;
+            UIHandler.instance.SetBeamSliderValue(spaceHeldTime/minTimeForBigBeam);
+
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
@@ -48,6 +50,7 @@ public class Shooter : MonoBehaviour
                 bigBeam.setType(3);
             }
             spaceHeldTime = 0f;
+            UIHandler.instance.SetBeamSliderValue(spaceHeldTime/minTimeForBigBeam);
         }
     }
 }
