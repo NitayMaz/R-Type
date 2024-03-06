@@ -147,7 +147,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: f08aef5f5459426428b57089549021b7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -194,15 +194,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6148ad17c43ecf9499de758d5c1a7005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTimeBetweenAttacks: 8
-  minTimeBetweenAttacks: 3
-  health: 1
   enemyAnimator: {fileID: 2636559210342304890}
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
   rb: {fileID: 6476817625220343518}
-  movementAmplitude: 0.005
+  movementAmplitude: 2
   movementFrequency: 2
-  speedX: -1
+  speedX: -2.5
 --- !u!114 &2042252350106606399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,3 +215,4 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.6
   topEdgeBuffer: 0.05
+  indicator: {fileID: 0}

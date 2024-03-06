@@ -119,11 +119,11 @@ public class PlayerController : MonoBehaviour
         playerAnimator.Play("Entering Screen",-1,0);
         playerAnimator.Update(0.01f);
         playerAnimator.StopPlayback();
+        playerAnimator.Play("Entering Screen");
         yield return null;
         while (playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
         {
             yield return null;
         }
-        Debug.Log("Opening animation finished");
     }
 }

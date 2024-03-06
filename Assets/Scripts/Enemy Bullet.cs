@@ -31,10 +31,6 @@ public class EnemyBullet : MonoBehaviour
             player.Die();
             Destroy(gameObject);
         }
-        if (collision.gameObject.tag == "Map")
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void FixedUpdate()

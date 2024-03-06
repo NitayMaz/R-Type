@@ -55,7 +55,6 @@ public class GameManager : MonoBehaviour
         //wait for animation to finish before starting the game
         if (playStartAnimation)
             yield return StartCoroutine(playerController.PlayOpeningAnimation());
-        Debug.Log("Game started");
         isPlaying = true;
     }
     

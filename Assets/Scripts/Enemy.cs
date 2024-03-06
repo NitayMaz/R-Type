@@ -17,15 +17,17 @@ public abstract class Enemy : MonoBehaviour
 
 
 
-    public Animator enemyAnimator;
+    protected Animator enemyAnimator;
     public GameObject enemyBulletPrefab;
     private GameObject player;
-    public Rigidbody2D rb;
-    private Vector3 movementAddition = Vector3.zero;
+    protected Rigidbody2D rb;
+    private Vector2 movementAddition = Vector2.zero;
 
 
     private void Start()
     {
+        enemyAnimator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         StartAnimation();
         timeToNextAttack = Random.Range(minTimeBetweenAttacks, maxTimeBetweenAttacks);
@@ -33,7 +35,7 @@ public abstract class Enemy : MonoBehaviour
 
     public abstract void StartAnimation();
 
-    public abstract Vector3 getMove();
+    public abstract Vector2 getMove();
 
 
     private void Update()
@@ -55,8 +57,10 @@ public abstract class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(transform.position + movementAddition);
-        movementAddition = Vector3.zero;
+
+        rb.MovePosition(rb.position + movementAddition);
+        movementAddition = Vector2.zero;
+
     }
 
     private void Attack()
@@ -72,29 +76,32 @@ public abstract class Enemy : MonoBehaviour
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
             player.Die();
         }
+        //collision with map is specific to only some enemies
         //collisions with bullets are handled in the bullet class
     }
 
     public void Die()
     {
-        GameManager.instance.AddScore(scoreValue);
         StartCoroutine(DeathAnimation());
     }
 
     IEnumerator DeathAnimation()
     {
+        enemyAnimator.enabled = true; // some enemies turn off the animator in favor of manual sprite changes
         isDead = true;
         enemyAnimator.SetTrigger("die");
+        rb.isKinematic = true; // in case it's dynamic, don't have the animation just fall
         GetComponent<Collider2D>().enabled = false; //so you won't die after the enemy is already dead and the animation is still playing
         yield return new WaitForSeconds(enemyAnimator.GetCurrentAnimatorStateInfo(0).length); //wait for the animation to finish before destroying the object
         Destroy(gameObject);
     }
 
-   public void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
         if (health <= 0)
         {
+            GameManager.instance.AddScore(scoreValue);
             Die();
         }
     }

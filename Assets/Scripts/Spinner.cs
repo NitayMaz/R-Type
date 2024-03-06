@@ -16,23 +16,23 @@ public class Spinner : Enemy
 
     protected override int health { get; set; } = 1;
 
+
+    protected override void OnTriggerEnter2D(Collider2D collision)
+    { //die when hitting walls
+        base.OnTriggerEnter2D(collision);
+        if (collision.gameObject.tag == "Map")
+        {
+            Destroy(gameObject);
+        }
+    }
     public override void StartAnimation()
     {
         enemyAnimator.SetTrigger("spinner");
     }
 
-    public override Vector3 getMove()
+    public override Vector2 getMove()
     {
         //moves like a sine wave
-        return new Vector3(speedX * Time.deltaTime, movementAmplitude * Mathf.Sin(transform.position.x*movementFrequency), 0);
-    }
-
-    protected override void OnTriggerEnter2D(Collider2D collision)
-    {
-        base.OnTriggerEnter2D(collision);
-        if (collision.gameObject.CompareTag("Map"))
-        {
-            Die();
-        }
+        return new Vector2(speedX * Time.deltaTime, movementAmplitude * Mathf.Sin(rb.position.x*movementFrequency) * Time.deltaTime);
     }
 }
