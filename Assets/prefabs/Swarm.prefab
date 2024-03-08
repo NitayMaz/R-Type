@@ -9,13 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 149392198989627170}
+  - component: {fileID: 5321448278873876623}
   m_Layer: 0
   m_Name: Swarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &149392198989627170
 Transform:
   m_ObjectHideFlags: 0
@@ -36,6 +37,18 @@ Transform:
   - {fileID: 8619469742673865773}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5321448278873876623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5845847079180520211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f063844e5df5848b911638a5c2d0db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1510251416512230639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44,6 +57,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 149392198989627170}
     m_Modifications:
+    - target: {fileID: 1242885472535923841, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
+      propertyPath: SquadParentObject
+      value: 
+      objectReference: {fileID: 5321448278873876623}
+    - target: {fileID: 2042252350106606399, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
+      propertyPath: squad
+      value: 
+      objectReference: {fileID: 5321448278873876623}
     - target: {fileID: 6003185635654932578, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
       propertyPath: m_Name
       value: spinner
@@ -106,6 +127,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 149392198989627170}
     m_Modifications:
+    - target: {fileID: 1242885472535923841, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
+      propertyPath: SquadParentObject
+      value: 
+      objectReference: {fileID: 5321448278873876623}
+    - target: {fileID: 2042252350106606399, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
+      propertyPath: squad
+      value: 
+      objectReference: {fileID: 5321448278873876623}
     - target: {fileID: 6003185635654932578, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
       propertyPath: m_Name
       value: spinner (4)
@@ -168,6 +197,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 149392198989627170}
     m_Modifications:
+    - target: {fileID: 1242885472535923841, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
+      propertyPath: SquadParentObject
+      value: 
+      objectReference: {fileID: 5321448278873876623}
+    - target: {fileID: 2042252350106606399, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
+      propertyPath: squad
+      value: 
+      objectReference: {fileID: 5321448278873876623}
     - target: {fileID: 6003185635654932578, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
       propertyPath: m_Name
       value: spinner (3)
@@ -230,6 +267,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 149392198989627170}
     m_Modifications:
+    - target: {fileID: 1242885472535923841, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
+      propertyPath: SquadParentObject
+      value: 
+      objectReference: {fileID: 5321448278873876623}
+    - target: {fileID: 2042252350106606399, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
+      propertyPath: squad
+      value: 
+      objectReference: {fileID: 5321448278873876623}
     - target: {fileID: 6003185635654932578, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
       propertyPath: m_Name
       value: spinner (2)
@@ -292,6 +337,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 149392198989627170}
     m_Modifications:
+    - target: {fileID: 1242885472535923841, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
+      propertyPath: SquadParentObject
+      value: 
+      objectReference: {fileID: 5321448278873876623}
+    - target: {fileID: 2042252350106606399, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
+      propertyPath: squad
+      value: 
+      objectReference: {fileID: 5321448278873876623}
     - target: {fileID: 6003185635654932578, guid: bbb4e20563eb5924786ead47cfcf61dc, type: 3}
       propertyPath: m_Name
       value: spinner (1)

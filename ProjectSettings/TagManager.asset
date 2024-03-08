@@ -8,6 +8,8 @@ TagManager:
   - Map
   - Enemy
   - Blocker
+  - RobotSquad
+  - Centipede
   layers:
   - Default
   - TransparentFX

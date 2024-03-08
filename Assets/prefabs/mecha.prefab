@@ -14,13 +14,14 @@ GameObject:
   - component: {fileID: 5953173975741623219}
   - component: {fileID: 1138122042320290543}
   - component: {fileID: 1642274285573342939}
+  - component: {fileID: 6406442614076263271}
   m_Layer: 0
   m_Name: mecha
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7891336628638461373
 Transform:
   m_ObjectHideFlags: 0
@@ -120,7 +121,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04087639, y: -0.15819108}
+  m_Offset: {x: -0.04087639, y: -0.027264714}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -131,7 +132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.674572, y: 1.946871}
+  m_Size: {x: 1.674572, y: 2.2087238}
   m_EdgeRadius: 0
 --- !u!50 &5953173975741623219
 Rigidbody2D:
@@ -194,4 +195,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 0}
   moveLeft: 1
+--- !u!114 &6406442614076263271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2917175371025386706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 0}

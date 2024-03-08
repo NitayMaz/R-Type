@@ -28,7 +28,13 @@ public class EnemyBullet : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            player.Die();
+            if(player.isInvincible)
+            {
+                //Debug.Log("should've died but didn't");
+                return;
+            }
+            else
+                player.Die();
             Destroy(gameObject);
         }
         if (collision.gameObject.tag == "Map")

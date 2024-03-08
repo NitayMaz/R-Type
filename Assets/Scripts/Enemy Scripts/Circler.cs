@@ -13,6 +13,7 @@ public class Circler : Enemy
     protected override int scoreValue => 100;
 
     public Transform circleCenter;
+    private Vector2 circleCenterPoint;
     public Sprite aliveSprite;
     public Sprite deadSprite;
     public Sprite coreSprite;
@@ -42,10 +43,9 @@ public class Circler : Enemy
         enemyAnimator.enabled = true;
         enemyAnimator.SetTrigger("die");
         //wait for the animation to finish before changing to the dead sprite
-        yield return null;//necesary to get into the animation
-        while(enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("Enemy Death"))
+        yield return null;//necesary to get into the death animation
+        while(enemyAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
         {
-
             yield return null;
         }
         enemyAnimator.enabled = false;
@@ -62,7 +62,7 @@ public class Circler : Enemy
 
     private void RotateToCenter()
     {
-        Vector2 directionToCenter = circleCenter.position - transform.position;
+        Vector2 directionToCenter = circleCenterPoint - rb.position;
 
         // Calculate angle to face the center point
         float angle = Mathf.Atan2(directionToCenter.normalized.y, directionToCenter.normalized.x) * Mathf.Rad2Deg - 90f; // Subtract 90 degrees to correct for the default sprite facing direction
@@ -77,7 +77,7 @@ public class Circler : Enemy
         float angle = rotationSpeed * Time.fixedDeltaTime;
 
         // Get current position relative to the center point
-        Vector2 relativePosition = rb.position - new Vector2(circleCenter.position.x, circleCenter.position.y);
+        Vector2 relativePosition = rb.position - circleCenterPoint;
 
         // Calculate the new position using a rotation matrix
         // This is equivalent to applying a 2D rotation around the origin (center point)
@@ -89,7 +89,7 @@ public class Circler : Enemy
         );
 
         // Translate the new position back to the global coordinate space
-        newPosition += new Vector2(circleCenter.position.x, circleCenter.position.y);
+        newPosition += circleCenterPoint;
 
         // Apply the new position to the Rigidbody2D
         rb.MovePosition(newPosition);
@@ -114,7 +114,8 @@ public class Circler : Enemy
     protected override void Attack()
     {
         EnemyBullet bullet = Instantiate(enemyBulletPrefab, transform.position, transform.rotation).GetComponent<EnemyBullet>();
-        bullet.SetSpeed((circleCenter.transform.position - bullet.transform.position).normalized); // shoot into circle not towrds player
+        Vector2 bulletPosition = new Vector2(bullet.transform.position.x, bullet.transform.position.y);  
+        bullet.SetSpeed((circleCenterPoint - bulletPosition).normalized); // shoot into circle not towrds player
     }
 
     public override void StartAnimation()
@@ -128,6 +129,7 @@ public class Circler : Enemy
         {
             spriteRenderer.sprite = aliveSprite;
         }
+        circleCenterPoint = circleCenter.position;
     }
 
 }

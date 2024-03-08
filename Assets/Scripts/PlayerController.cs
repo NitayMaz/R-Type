@@ -9,9 +9,9 @@ public class PlayerController : MonoBehaviour
     public float minDistanceFromEdgesX = 1f;
     public float moveSpeed = 5f;
     public Animator playerAnimator;
-    public bool alive = true;
     private Rigidbody2D rb;
     public Camera gameCamera;
+    public bool isInvincible = false;
 
     private Vector2 movementAddition;
     private float minCameraX, minCameraY, maxCameraX, maxCameraY;
@@ -24,11 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    void Start() 
-    { 
-        alive = true;
-        CalculateCameraBounds();
-    }
+
     
     private void CalculateCameraBounds()
     {
@@ -38,8 +34,6 @@ public class PlayerController : MonoBehaviour
         minCameraY = bottomLeft.y;
         maxCameraX = topRight.x;
         maxCameraY = topRight.y;
-
-    
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,6 +51,10 @@ public class PlayerController : MonoBehaviour
         if(!GameManager.instance.isPlaying)
         {
             return;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            isInvincible = !isInvincible;
         }
         handleMovement();
     }
@@ -93,8 +91,14 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(!GameManager.instance.isPlaying)
+        {
+            return;
+        }
         // make sure the player doesn't go off screen and move him
+        CalculateCameraBounds();
         Vector2 newPosition = rb.position + movementAddition;
+        newPosition += Vector2.right * GameManager.instance.cameraMoveSpeed * Time.fixedDeltaTime;
         newPosition.x = Mathf.Clamp(newPosition.x, minCameraX + minDistanceFromEdgesX, maxCameraX - minDistanceFromEdgesX);
         newPosition.y = Mathf.Clamp(newPosition.y, minCameraY + minDistanceFromEdgesY, maxCameraY - minDistanceFromEdgesY);
         rb.MovePosition(newPosition);

@@ -9,13 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5197508784417727885}
+  - component: {fileID: 6474984726614738043}
   m_Layer: 0
   m_Name: Floor Turrets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5197508784417727885
 Transform:
   m_ObjectHideFlags: 0
@@ -33,6 +34,18 @@ Transform:
   - {fileID: 5172145385951021193}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6474984726614738043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193600524598187877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f063844e5df5848b911638a5c2d0db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1149006868641214181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49,6 +62,10 @@ PrefabInstance:
       propertyPath: onCeiling
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2942626181139816377, guid: 35d59e84811be3942bb48ca97ec5553f, type: 3}
+      propertyPath: SquadParentObject
+      value: 
+      objectReference: {fileID: 6474984726614738043}
     - target: {fileID: 8759412909148413851, guid: 35d59e84811be3942bb48ca97ec5553f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.44237447
@@ -92,8 +109,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1051833304050007515, guid: 35d59e84811be3942bb48ca97ec5553f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5994532299855708585}
   m_SourcePrefab: {fileID: 100100000, guid: 35d59e84811be3942bb48ca97ec5553f, type: 3}
+--- !u!1 &102117666332119870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1051833304050007515, guid: 35d59e84811be3942bb48ca97ec5553f, type: 3}
+  m_PrefabInstance: {fileID: 1149006868641214181}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5994532299855708585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102117666332119870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 6474984726614738043}
 --- !u!4 &8538182819020861822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8759412909148413851, guid: 35d59e84811be3942bb48ca97ec5553f, type: 3}
@@ -115,6 +156,10 @@ PrefabInstance:
       propertyPath: onCeiling
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2942626181139816377, guid: 35d59e84811be3942bb48ca97ec5553f, type: 3}
+      propertyPath: SquadParentObject
+      value: 
+      objectReference: {fileID: 6474984726614738043}
     - target: {fileID: 8759412909148413851, guid: 35d59e84811be3942bb48ca97ec5553f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5570002
@@ -158,8 +203,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1051833304050007515, guid: 35d59e84811be3942bb48ca97ec5553f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4301675301909106830}
   m_SourcePrefab: {fileID: 100100000, guid: 35d59e84811be3942bb48ca97ec5553f, type: 3}
+--- !u!1 &3517405471039892169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1051833304050007515, guid: 35d59e84811be3942bb48ca97ec5553f, type: 3}
+  m_PrefabInstance: {fileID: 4487988155194693394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4301675301909106830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3517405471039892169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 6474984726614738043}
 --- !u!4 &5172145385951021193 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8759412909148413851, guid: 35d59e84811be3942bb48ca97ec5553f, type: 3}

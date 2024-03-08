@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Turret : Enemy
 {
-    protected override float maxTimeBetweenAttacks => 5f;
+    protected override float maxTimeBetweenAttacks => 8f;
 
     protected override float minTimeBetweenAttacks => 1f;
 

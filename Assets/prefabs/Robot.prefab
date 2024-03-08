@@ -193,5 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c39642bc013a97b4aa39273c392b0178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBulletPrefab: {fileID: 0}
+  enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 0}
   speed: 4

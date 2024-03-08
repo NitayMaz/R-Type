@@ -22,6 +22,7 @@ public abstract class Enemy : MonoBehaviour
     public GameObject enemyBulletPrefab;
     protected GameObject player;
     protected Rigidbody2D rb;
+    public EnemySquad SquadParentObject;
 
     private void Awake()
     {
@@ -78,6 +79,11 @@ public abstract class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+            if (player.isInvincible)
+            {
+                //Debug.Log("should've died but didn't");
+                return;
+            }
             player.Die();
         }
         //collision with map is specific to only some enemies
@@ -97,6 +103,10 @@ public abstract class Enemy : MonoBehaviour
         rb.isKinematic = true; // in case it's dynamic, don't have the animation move through forces
         GetComponent<Collider2D>().enabled = false; //so you won't die after the enemy is already dead and the animation is still playing
         yield return new WaitForSeconds(enemyAnimator.GetCurrentAnimatorStateInfo(0).length); //wait for the animation to finish before destroying the object
+        if (SquadParentObject != null)
+        {
+            SquadParentObject.checkShouldDestroy();
+        }
         Destroy(gameObject);
     }
     public virtual void TakeDamage(int damage)

@@ -134,7 +134,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle
+  m_Name: tealShip
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -302,7 +302,7 @@ AnimatorStateMachine:
     m_Position: {x: 373.7491, y: -57.594208, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5984593791315758375}
-    m_Position: {x: 673.2245, y: 179.90091, z: 0}
+    m_Position: {x: -20, y: 210, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -8138866114381615554}
@@ -310,7 +310,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_EntryPosition: {x: -50, y: 140, z: 0}
   m_ExitPosition: {x: 980, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -1846413304945518026}

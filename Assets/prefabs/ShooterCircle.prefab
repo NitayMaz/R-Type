@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6999716021028200500}
+  - component: {fileID: 8238211077625484322}
   m_Layer: 0
   m_Name: center
   m_TagString: Untagged
@@ -24,13 +25,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220131963054864207}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.519266, y: 0.6109766, z: -0.009828494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 906034242962990502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8238211077625484322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220131963054864207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!1 &538288985133517980
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +60,7 @@ GameObject:
   - component: {fileID: 6707792716281724349}
   - component: {fileID: 1115305923299704639}
   - component: {fileID: 1529179541098785535}
+  - component: {fileID: 5655111706168171690}
   - component: {fileID: 954104475491462504}
   - component: {fileID: 8379660057399668488}
   m_Layer: 0
@@ -167,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 2329779755600139401}
   circleCenter: {fileID: 6999716021028200500}
   aliveSprite: {fileID: 1277875969, guid: da5882185664c364795e40455f658f10, type: 3}
   deadSprite: {fileID: 875751398, guid: da5882185664c364795e40455f658f10, type: 3}
@@ -177,6 +196,22 @@ MonoBehaviour:
   rightNeighbor: {fileID: 1114333387560937552}
   leftNeighbor: {fileID: 8932197923049874613}
   timeToDestroyNeighbors: 0.1
+--- !u!114 &5655111706168171690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538288985133517980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!50 &954104475491462504
 Rigidbody2D:
   serializedVersion: 4
@@ -237,8 +272,10 @@ GameObject:
   - component: {fileID: 2926842416466454896}
   - component: {fileID: 4890217056403244086}
   - component: {fileID: 27865820976007748}
+  - component: {fileID: 1230312279663085697}
   - component: {fileID: 2846354518982423016}
   - component: {fileID: 3444564690867525249}
+  - component: {fileID: 2101595251974483475}
   m_Layer: 0
   m_Name: circler1
   m_TagString: Enemy
@@ -361,6 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 2329779755600139401}
   circleCenter: {fileID: 6999716021028200500}
   aliveSprite: {fileID: 1277875969, guid: da5882185664c364795e40455f658f10, type: 3}
   deadSprite: {fileID: 875751398, guid: da5882185664c364795e40455f658f10, type: 3}
@@ -371,6 +409,22 @@ MonoBehaviour:
   rightNeighbor: {fileID: 1753004406683891548}
   leftNeighbor: {fileID: 0}
   timeToDestroyNeighbors: 0.1
+--- !u!114 &1230312279663085697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086910856478502157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!50 &2846354518982423016
 Rigidbody2D:
   serializedVersion: 4
@@ -419,6 +473,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2101595251974483475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086910856478502157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 0}
 --- !u!1 &1666655993617043244
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +501,7 @@ GameObject:
   - component: {fileID: 5182633327520442099}
   - component: {fileID: 7868665699927791306}
   - component: {fileID: 4106056670233759323}
+  - component: {fileID: 8656805856119574381}
   - component: {fileID: 2143954769615341492}
   - component: {fileID: 2077683062302783147}
   m_Layer: 0
@@ -555,6 +626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 2329779755600139401}
   circleCenter: {fileID: 6999716021028200500}
   aliveSprite: {fileID: 1277875969, guid: da5882185664c364795e40455f658f10, type: 3}
   deadSprite: {fileID: 875751398, guid: da5882185664c364795e40455f658f10, type: 3}
@@ -565,6 +637,22 @@ MonoBehaviour:
   rightNeighbor: {fileID: 6293204124782612615}
   leftNeighbor: {fileID: 1114333387560937552}
   timeToDestroyNeighbors: 0.1
+--- !u!114 &8656805856119574381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666655993617043244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!50 &2143954769615341492
 Rigidbody2D:
   serializedVersion: 4
@@ -625,6 +713,7 @@ GameObject:
   - component: {fileID: 3417006088318815146}
   - component: {fileID: 4656048033363427276}
   - component: {fileID: 1114333387560937552}
+  - component: {fileID: 1771485539484126965}
   - component: {fileID: 8215846867394407073}
   - component: {fileID: 8358689703437422279}
   m_Layer: 0
@@ -749,6 +838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 2329779755600139401}
   circleCenter: {fileID: 6999716021028200500}
   aliveSprite: {fileID: 1277875969, guid: da5882185664c364795e40455f658f10, type: 3}
   deadSprite: {fileID: 875751398, guid: da5882185664c364795e40455f658f10, type: 3}
@@ -759,6 +849,22 @@ MonoBehaviour:
   rightNeighbor: {fileID: 4106056670233759323}
   leftNeighbor: {fileID: 1529179541098785535}
   timeToDestroyNeighbors: 0.1
+--- !u!114 &1771485539484126965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579539584278808745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!50 &8215846867394407073
 Rigidbody2D:
   serializedVersion: 4
@@ -819,6 +925,7 @@ GameObject:
   - component: {fileID: 3323694421778327469}
   - component: {fileID: 7058585984124405035}
   - component: {fileID: 6293204124782612615}
+  - component: {fileID: 4828796749058305404}
   - component: {fileID: 5519578979491323763}
   - component: {fileID: 502240412523465806}
   m_Layer: 0
@@ -943,6 +1050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 2329779755600139401}
   circleCenter: {fileID: 6999716021028200500}
   aliveSprite: {fileID: 1277875969, guid: da5882185664c364795e40455f658f10, type: 3}
   deadSprite: {fileID: 875751398, guid: da5882185664c364795e40455f658f10, type: 3}
@@ -953,6 +1061,22 @@ MonoBehaviour:
   rightNeighbor: {fileID: 0}
   leftNeighbor: {fileID: 4106056670233759323}
   timeToDestroyNeighbors: 0.1
+--- !u!114 &4828796749058305404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450011837484193235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!50 &5519578979491323763
 Rigidbody2D:
   serializedVersion: 4
@@ -1013,6 +1137,7 @@ GameObject:
   - component: {fileID: 7456079396103027709}
   - component: {fileID: 5128788849649356}
   - component: {fileID: 1753004406683891548}
+  - component: {fileID: 3571815838715965351}
   - component: {fileID: 5175000895444185429}
   - component: {fileID: 7129871012589159548}
   m_Layer: 0
@@ -1137,6 +1262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 2329779755600139401}
   circleCenter: {fileID: 6999716021028200500}
   aliveSprite: {fileID: 1277875969, guid: da5882185664c364795e40455f658f10, type: 3}
   deadSprite: {fileID: 875751398, guid: da5882185664c364795e40455f658f10, type: 3}
@@ -1147,6 +1273,22 @@ MonoBehaviour:
   rightNeighbor: {fileID: 6077915362348586773}
   leftNeighbor: {fileID: 27865820976007748}
   timeToDestroyNeighbors: 0.1
+--- !u!114 &3571815838715965351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3486998749356892214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!50 &5175000895444185429
 Rigidbody2D:
   serializedVersion: 4
@@ -1206,6 +1348,7 @@ GameObject:
   - component: {fileID: 7347465086102032631}
   - component: {fileID: 3966868825769064774}
   - component: {fileID: 6077915362348586773}
+  - component: {fileID: 8272859653385176313}
   - component: {fileID: 7414013244243575078}
   - component: {fileID: 3122524570763493389}
   - component: {fileID: 3816171056122903987}
@@ -1297,6 +1440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 2329779755600139401}
   circleCenter: {fileID: 6999716021028200500}
   aliveSprite: {fileID: 1277875969, guid: da5882185664c364795e40455f658f10, type: 3}
   deadSprite: {fileID: 875751398, guid: da5882185664c364795e40455f658f10, type: 3}
@@ -1307,6 +1451,22 @@ MonoBehaviour:
   rightNeighbor: {fileID: 1022327138869866612}
   leftNeighbor: {fileID: 1753004406683891548}
   timeToDestroyNeighbors: 0.1
+--- !u!114 &8272859653385176313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402253628820661470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!95 &7414013244243575078
 Animator:
   serializedVersion: 5
@@ -1489,6 +1649,7 @@ GameObject:
   - component: {fileID: 1432048338257506794}
   - component: {fileID: 7619850575352761493}
   - component: {fileID: 8000425332034112984}
+  - component: {fileID: 8410090471519156295}
   - component: {fileID: 2264320408777186742}
   - component: {fileID: 6973471900621729458}
   m_Layer: 0
@@ -1613,6 +1774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 2329779755600139401}
   circleCenter: {fileID: 6999716021028200500}
   aliveSprite: {fileID: 1277875969, guid: da5882185664c364795e40455f658f10, type: 3}
   deadSprite: {fileID: 875751398, guid: da5882185664c364795e40455f658f10, type: 3}
@@ -1623,6 +1785,22 @@ MonoBehaviour:
   rightNeighbor: {fileID: 105914910735578816}
   leftNeighbor: {fileID: 628016932076130242}
   timeToDestroyNeighbors: 0.1
+--- !u!114 &8410090471519156295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450883546011434551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!50 &2264320408777186742
 Rigidbody2D:
   serializedVersion: 4
@@ -1683,6 +1861,7 @@ GameObject:
   - component: {fileID: 5455216550420139561}
   - component: {fileID: 197358408968279900}
   - component: {fileID: 1022327138869866612}
+  - component: {fileID: 5196825195844870152}
   - component: {fileID: 3387224562676134656}
   - component: {fileID: 3368532977361333398}
   m_Layer: 0
@@ -1807,6 +1986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 2329779755600139401}
   circleCenter: {fileID: 6999716021028200500}
   aliveSprite: {fileID: 1277875969, guid: da5882185664c364795e40455f658f10, type: 3}
   deadSprite: {fileID: 875751398, guid: da5882185664c364795e40455f658f10, type: 3}
@@ -1817,6 +1997,22 @@ MonoBehaviour:
   rightNeighbor: {fileID: 628016932076130242}
   leftNeighbor: {fileID: 6077915362348586773}
   timeToDestroyNeighbors: 0.1
+--- !u!114 &5196825195844870152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538202266784780562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!50 &3387224562676134656
 Rigidbody2D:
   serializedVersion: 4
@@ -1877,6 +2073,7 @@ GameObject:
   - component: {fileID: 478446612207595500}
   - component: {fileID: 2341675640472089628}
   - component: {fileID: 105914910735578816}
+  - component: {fileID: 6280024597002982077}
   - component: {fileID: 902481833332613418}
   - component: {fileID: 7456760929547026199}
   m_Layer: 0
@@ -2001,6 +2198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 2329779755600139401}
   circleCenter: {fileID: 6999716021028200500}
   aliveSprite: {fileID: 1277875969, guid: da5882185664c364795e40455f658f10, type: 3}
   deadSprite: {fileID: 875751398, guid: da5882185664c364795e40455f658f10, type: 3}
@@ -2011,6 +2209,22 @@ MonoBehaviour:
   rightNeighbor: {fileID: 8932197923049874613}
   leftNeighbor: {fileID: 8000425332034112984}
   timeToDestroyNeighbors: 0.1
+--- !u!114 &6280024597002982077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7201943018048010657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!50 &902481833332613418
 Rigidbody2D:
   serializedVersion: 4
@@ -2071,6 +2285,7 @@ GameObject:
   - component: {fileID: 4791828229637683740}
   - component: {fileID: 8910759523103690286}
   - component: {fileID: 628016932076130242}
+  - component: {fileID: 4915402997773699080}
   - component: {fileID: 3875710334064498090}
   - component: {fileID: 283689692281502693}
   m_Layer: 0
@@ -2195,6 +2410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 2329779755600139401}
   circleCenter: {fileID: 6999716021028200500}
   aliveSprite: {fileID: 1277875969, guid: da5882185664c364795e40455f658f10, type: 3}
   deadSprite: {fileID: 875751398, guid: da5882185664c364795e40455f658f10, type: 3}
@@ -2205,6 +2421,22 @@ MonoBehaviour:
   rightNeighbor: {fileID: 8000425332034112984}
   leftNeighbor: {fileID: 1022327138869866612}
   timeToDestroyNeighbors: 0.1
+--- !u!114 &4915402997773699080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7555242381007069954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!50 &3875710334064498090
 Rigidbody2D:
   serializedVersion: 4
@@ -2265,6 +2497,7 @@ GameObject:
   - component: {fileID: 5618718471738307375}
   - component: {fileID: 6757017451790674848}
   - component: {fileID: 8932197923049874613}
+  - component: {fileID: 6108833598125321429}
   - component: {fileID: 6491841366709093274}
   - component: {fileID: 4545975749872610432}
   m_Layer: 0
@@ -2389,6 +2622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 6173489167141670276, guid: b39d13684297d214c9f63ef633feaa22, type: 3}
+  SquadParentObject: {fileID: 2329779755600139401}
   circleCenter: {fileID: 6999716021028200500}
   aliveSprite: {fileID: 1277875969, guid: da5882185664c364795e40455f658f10, type: 3}
   deadSprite: {fileID: 875751398, guid: da5882185664c364795e40455f658f10, type: 3}
@@ -2399,6 +2633,22 @@ MonoBehaviour:
   rightNeighbor: {fileID: 1529179541098785535}
   leftNeighbor: {fileID: 105914910735578816}
   timeToDestroyNeighbors: 0.1
+--- !u!114 &6108833598125321429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8251193897542410153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b814ee76ef0094c8e56af4b26b21ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEdgeBuffer: 0.05
+  rightEdgeBuffer: 0.5
+  topEdgeBuffer: 0.1
+  squad: {fileID: 2329779755600139401}
 --- !u!50 &6491841366709093274
 Rigidbody2D:
   serializedVersion: 4
@@ -2456,13 +2706,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 906034242962990502}
+  - component: {fileID: 2329779755600139401}
   m_Layer: 0
   m_Name: ShooterCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &906034242962990502
 Transform:
   m_ObjectHideFlags: 0
@@ -2491,3 +2742,15 @@ Transform:
   - {fileID: 6999716021028200500}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2329779755600139401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8493200763640636106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f063844e5df5848b911638a5c2d0db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

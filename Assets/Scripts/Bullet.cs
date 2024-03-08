@@ -16,9 +16,9 @@ public class Bullet : MonoBehaviour
     public Vector2 largeBeamColliderDimensions;
     public float xOffsetSmallBeam = 0.5f;
     public float xOffsetBigBeam = 1.5f;
-    public int simpleBulletDamage = 1;
-    public int smallBeamDamage = 2;
-    public int largeBeamDamage = 3;
+    private int simpleBulletDamage = 1;
+    private int smallBeamDamage = 3;
+    private int largeBeamDamage = 3;
     public int damage;
 
     private void Awake()
@@ -44,7 +44,7 @@ public class Bullet : MonoBehaviour
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             enemy.TakeDamage(damage);
-            if(type==1)
+            if(type==1 || type == 2)
                 Destroy(gameObject);
         }
         if(collision.gameObject.tag == "Map" || collision.gameObject.tag == "Blocker")
