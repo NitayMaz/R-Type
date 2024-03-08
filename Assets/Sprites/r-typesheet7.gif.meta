@@ -144,7 +144,7 @@ TextureImporter:
         width: 33.333332
         height: 33.5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
         width: 33.333332
         height: 33.5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,7 +186,7 @@ TextureImporter:
         width: 33.333332
         height: 33.5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,7 +207,7 @@ TextureImporter:
         width: 33.333332
         height: 33.5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,7 +228,7 @@ TextureImporter:
         width: 33.333332
         height: 33.5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,7 +249,7 @@ TextureImporter:
         width: 33.333332
         height: 33.5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,132 +257,6 @@ TextureImporter:
       bones: []
       spriteID: 4236803d465d36f4191f8617b5a924c4
       internalID: 1484576310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet7_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0.5
-        width: 33.333332
-        height: 33.5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a6c3dbf4eff16240b59a8603d311221
-      internalID: -861490962
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet7_7
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 0.5
-        width: 33.333332
-        height: 33.5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69ac85f8277552f44ad286eb33e300a1
-      internalID: -1451996853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet7_8
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 0.5
-        width: 33.333332
-        height: 33.5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91e089f3627347c40a5f0490be8ff128
-      internalID: 22744080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet7_9
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 0.5
-        width: 33.333332
-        height: 33.5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1aefc992de4fae4caa7a125ae07161b
-      internalID: -1887775481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet7_10
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 0.5
-        width: 33.333332
-        height: 33.5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d2a4289cf2b71249aca0a270d0f5301
-      internalID: 1324533673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: r-typesheet7_11
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 0.5
-        width: 33.333332
-        height: 33.5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 885c0c7869f4ec74a8c225665abc35b9
-      internalID: -633610407
       vertices: []
       indices: 
       edges: []

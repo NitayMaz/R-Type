@@ -60,17 +60,20 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\Spinner.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\Mecha.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\Turret.cs" />
     <Compile Include="Assets\Scripts\UI Handler.cs" />
     <Compile Include="Assets\Scripts\Game Manager.cs" />
-    <Compile Include="Assets\Scripts\Spinner.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\CentipedePiece.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\Circler.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Mecha.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\Robot.cs" />
     <Compile Include="Assets\Scripts\RemoveWhenOutsideScreen.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Shooter.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\CentipedePiece.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy Bullet.cs" />
   </ItemGroup>
   <ItemGroup>

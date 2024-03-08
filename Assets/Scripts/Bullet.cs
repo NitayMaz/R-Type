@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
     public float xOffsetSmallBeam = 0.5f;
     public float xOffsetBigBeam = 1.5f;
     public int simpleBulletDamage = 1;
-    public int smallBeamDamage = 1;
+    public int smallBeamDamage = 2;
     public int largeBeamDamage = 3;
     public int damage;
 
@@ -47,7 +47,7 @@ public class Bullet : MonoBehaviour
             if(type==1)
                 Destroy(gameObject);
         }
-        if(collision.gameObject.tag == "Map")
+        if(collision.gameObject.tag == "Map" || collision.gameObject.tag == "Blocker")
         {
             Destroy(gameObject);
         }
