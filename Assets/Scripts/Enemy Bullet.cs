@@ -28,7 +28,7 @@ public class EnemyBullet : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            if(player.isInvincible)
+            if(player.isInvincible || player.warping)
             {
                 //Debug.Log("should've died but didn't");
                 return;

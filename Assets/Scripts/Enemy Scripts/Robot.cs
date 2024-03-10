@@ -13,7 +13,7 @@ public class Robot : Enemy
 
     protected override int scoreValue => 250;
 
-    private float yExtraSpeedModifier = 1f;
+    private float yExtraSpeedModifier = 2f;
 
     public float speed = 4f;
 

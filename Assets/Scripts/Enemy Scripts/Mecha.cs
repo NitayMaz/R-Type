@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mecha : Enemy
 {
-    protected override float maxTimeBetweenAttacks => 7.0f;
+    protected override float maxTimeBetweenAttacks => 5.0f;
 
     protected override float minTimeBetweenAttacks => 1.0f;
 

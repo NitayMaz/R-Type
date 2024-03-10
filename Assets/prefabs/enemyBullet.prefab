@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2610864228791561584}
   m_Layer: 0
   m_Name: enemyBullet
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,7 +184,8 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.6
   topEdgeBuffer: 0.05
-  indicator: {fileID: 0}
+  bottomEdgeBuffer: 0.1
+  squad: {fileID: 0}
 --- !u!50 &2610864228791561584
 Rigidbody2D:
   serializedVersion: 4

@@ -28,6 +28,7 @@ public class EnemySpawner : MonoBehaviour
     private int nextEnemyIndex = 0;
     private int nextEnemyIndexAtCheckpoint = 0;
     public float DistanceFromCameraToSpawnEnemy = 1f;
+    public bool spawnEnemies = true;
 
     public GameObject swarmPrefab;
     public GameObject centipedePrefab;
@@ -65,10 +66,15 @@ public class EnemySpawner : MonoBehaviour
 
     public void HandleSpawnEnemies()
     {
+        if(!spawnEnemies)
+        {
+            return;
+        }
         float maxCameraX = mainCamera.ViewportToWorldPoint(new Vector3(1, 1, 0)).x;
         if (nextEnemyIndex < enemyLocations.Count &&
                 enemyLocations[nextEnemyIndex].spawnLocation.x < maxCameraX + DistanceFromCameraToSpawnEnemy)
         {
+            EnemySpawnFactory(enemyLocations[nextEnemyIndex]);
             nextEnemyIndex++;
         }
     }

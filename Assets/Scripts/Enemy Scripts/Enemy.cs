@@ -79,7 +79,7 @@ public abstract class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            if (player.isInvincible)
+            if (player.isInvincible || player.warping)
             {
                 //Debug.Log("should've died but didn't");
                 return;
@@ -114,7 +114,7 @@ public abstract class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            GameManager.instance.AddScore(scoreValue);
+            GameManager.instance.AddScore(scoreValue*GameManager.instance.difficulty);
             Die();
         }
     }

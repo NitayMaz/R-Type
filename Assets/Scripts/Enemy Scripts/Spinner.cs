@@ -8,7 +8,7 @@ public class Spinner : Enemy
     public float movementFrequency = 2;
     public float speedX = 3;
 
-    protected override float maxTimeBetweenAttacks => 20.0f;
+    protected override float maxTimeBetweenAttacks => 15.0f;
 
     protected override float minTimeBetweenAttacks => 1.0f;
 

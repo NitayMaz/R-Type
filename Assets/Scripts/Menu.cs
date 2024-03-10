@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public GameObject OpeningMenu;
+    public GameObject DifficultyMenu;
     private AsyncOperation loadLevel;
 
     IEnumerator LoadLevelSceneAsync(string sceneName)
@@ -25,11 +27,24 @@ public class Menu : MonoBehaviour
         }
     }
 
-    public void StartGame()
+    public void StartGame(int difficulty)
     {
+        PlayerPrefs.SetInt("Difficulty", difficulty);
+        PlayerPrefs.Save();
         StartCoroutine(LoadLevelSceneAsync("level"));
     }
 
+    public void OpenDifficultyMenu()
+    {
+        OpeningMenu.SetActive(false);
+        DifficultyMenu.SetActive(true);
+    }
+
+    public void CloseDifficultyMenu()
+    {
+        OpeningMenu.SetActive(true);
+        DifficultyMenu.SetActive(false);
+    }
 
     public void QuitGame()
     {

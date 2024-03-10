@@ -47,6 +47,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!1 &538288985133517980
 GameObject:
@@ -211,6 +212,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!50 &954104475491462504
 Rigidbody2D:
@@ -424,6 +426,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!50 &2846354518982423016
 Rigidbody2D:
@@ -488,6 +491,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 0}
 --- !u!1 &1666655993617043244
 GameObject:
@@ -652,6 +656,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!50 &2143954769615341492
 Rigidbody2D:
@@ -864,6 +869,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!50 &8215846867394407073
 Rigidbody2D:
@@ -1076,6 +1082,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!50 &5519578979491323763
 Rigidbody2D:
@@ -1288,6 +1295,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!50 &5175000895444185429
 Rigidbody2D:
@@ -1466,6 +1474,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!95 &7414013244243575078
 Animator:
@@ -1800,6 +1809,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!50 &2264320408777186742
 Rigidbody2D:
@@ -2012,6 +2022,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!50 &3387224562676134656
 Rigidbody2D:
@@ -2224,6 +2235,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!50 &902481833332613418
 Rigidbody2D:
@@ -2436,6 +2448,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!50 &3875710334064498090
 Rigidbody2D:
@@ -2648,6 +2661,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 2329779755600139401}
 --- !u!50 &6491841366709093274
 Rigidbody2D:
@@ -2713,7 +2727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &906034242962990502
 Transform:
   m_ObjectHideFlags: 0

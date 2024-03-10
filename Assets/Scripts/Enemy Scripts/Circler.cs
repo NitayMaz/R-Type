@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Circler : Enemy
 {
-    protected override float maxTimeBetweenAttacks => 25f;
+    protected override float maxTimeBetweenAttacks => 20f;
 
-    protected override float minTimeBetweenAttacks => 3f;
+    protected override float minTimeBetweenAttacks => 2f;
 
     protected override int health { get; set; } = 0; //this one takes damage in a different way
 

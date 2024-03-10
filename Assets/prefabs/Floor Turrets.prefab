@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5197508784417727885
 Transform:
   m_ObjectHideFlags: 0
@@ -134,6 +134,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 6474984726614738043}
 --- !u!4 &8538182819020861822 stripped
 Transform:
@@ -228,6 +229,7 @@ MonoBehaviour:
   leftEdgeBuffer: 0.05
   rightEdgeBuffer: 0.5
   topEdgeBuffer: 0.1
+  bottomEdgeBuffer: 0.1
   squad: {fileID: 6474984726614738043}
 --- !u!4 &5172145385951021193 stripped
 Transform:
